@@ -1,0 +1,60 @@
+#title {
+    width: 100%;
+    height: max-content;
+    background-color: darkblue;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#title h1 {
+    color: white;
+}
+
+.pet-ctn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.pet-ctn:hover {
+    background-color: aqua;
+}
+
+.pet-ctn p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pet-ctn img{
+    margin-top: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+#pet-selection-ctn {
+    display: flex;
+}
+
+#selected-pet-ctn {
+    display: flex;
+    border: 1px solid black;
+}
+
+#selected-pet-ctn img {
+    width: 450px;
+    height: 450px;
+}
+
+#info-btn-ctn {
+    width: 100%;
+    margin-left: 10px;
+}
+
+#info-btn-ctn div{
+    margin-bottom: 60px;
+}
