@@ -41,10 +41,20 @@
                     alt="cheems"
                 >
                 <div id="info-btn-ctn">
-                    <div id="name-ctn">
-                        <p>Your pet name:</p>
-                        <h3>Dog</h3>
-                        <button id="name-edit-btn">Edit</button>
+                    <div>
+                        <div id="name-display-ctn">
+                            <p>Your pet name:</p>
+                            <h3>Dog</h3>
+                            <button id="name-edit-btn">Edit</button>
+                        </div>
+                        <div id="name-edit-ctn" style="display: none;">
+                            <label>Enter your pet name: </label>
+                            <input type="text">
+                            <div>
+                                <button>Save</button>
+                                <button>Cancel</button>
+                            </div>
+                        </div>
                     </div>
                     <div id="output-ctn">
                         <h2 id="pet-action">Woof woof!</h2>

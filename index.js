@@ -2,6 +2,8 @@ const dogCtn = document.querySelector("#dog")
 const catCtn = document.querySelector("#cat")
 const fishCtn = document.querySelector("#fish")
 const nameCtn = document.querySelector("#name-ctn")
+const nameDisplayCtn = document.querySelector("#name-display-ctn")
+const nameEditCtn = document.querySelector("#name-edit-ctn")
 
 const petSelectionCtn = document.querySelector("#pet-selection-ctn")
 const selectedPetCtn = document.querySelector("#selected-pet-ctn")
@@ -15,6 +17,7 @@ function toggleSelectionDisplayOff() {
     petSelectionCtn.style.display = "none"
     selectedPetCtn.style.display = "flex"
 }
+
 
 dogCtn.addEventListener("click", () => {
     console.log("dog")
@@ -32,14 +35,8 @@ fishCtn.addEventListener("click", () => {
 })
 
 nameEditBtn.addEventListener("click", () => {
-    nameCtn.innerHTML = `
-        <label>Enter your pet name: </label>
-        <input type="text">
-        <div>
-            <button>Save</button>
-            <button>Cancel</button>
-        </div>
-    `
+        petSelectionCtn.style.display = "none"
+        selectedPetCtn.style.display = "flex"
 })
 
 backBtn.addEventListener("click", () => {
