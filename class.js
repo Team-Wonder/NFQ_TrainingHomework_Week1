@@ -4,22 +4,6 @@ class Animals {
         this.img = img
     }
 
-    set aname(name) {
-        this.name = name
-    }
-
-    get aname() {
-        return this.name
-    }
-
-    set aimg(img) {
-        this.img = img
-    }
-
-    get aimg() {
-        return this.img
-    }
-
     eat() {
         return "I am eating. Nom nom nom!"
     }
@@ -33,7 +17,7 @@ class Animals {
     }
 }
 
-export class Dog extends Animals {
+class Dog extends Animals {
     constructor(name, img) {
         super(name, img)
     }
@@ -47,7 +31,7 @@ export class Dog extends Animals {
     }
 }
 
-export class Cat extends Animals {
+class Cat extends Animals {
     constructor(name, img) {
         super(name, img)
     }
@@ -61,7 +45,7 @@ export class Cat extends Animals {
     }
 }
 
-export class Fish extends Animals {
+class Fish extends Animals {
     constructor(name, img) {
         super(name, img)
     }

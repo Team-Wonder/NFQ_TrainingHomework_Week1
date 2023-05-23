@@ -1,9 +1,9 @@
-import { Dog, Cat, Fish } from "./class"
+import  {Dog, Cat, Fish}  from "./class"
 
 const dogCtn = document.querySelector("#dog")
 const catCtn = document.querySelector("#cat")
 const fishCtn = document.querySelector("#fish")
-const nameCtn = document.querySelector("#name-ctn")
+// const nameCtn = document.querySelector("#name-ctn")
 const nameDisplayCtn = document.querySelector("#name-display-ctn")
 const nameEditCtn = document.querySelector("#name-edit-ctn")
 
@@ -16,38 +16,51 @@ const cancelBtn = document.querySelector("#cancel-btn")
 
 let pet = {}
 
-function toggleSelectionDisplayOff() {
-    petSelectionCtn.style.display = "none"
-    selectedPetCtn.style.display = "flex"
+function toggleSelectionDisplay(cmd) {
+    if (cmd === "off") {
+        petSelectionCtn.style.display = "none"
+        selectedPetCtn.style.display = "flex"
+        return;
+    }
+    
+    petSelectionCtn.style.display = "flex"
+    selectedPetCtn.style.display = "none"
 }
 
+function toggleNameEdit(cmd) {
+    if (cmd === "off") {
+        nameDisplayCtn.style.display = "block"
+        nameEditCtn.style.display = "none"
+    }
+
+    nameDisplayCtn.style.display = "none"
+    nameEditCtn.style.display = "block"
+}
 
 dogCtn.addEventListener("click", () => {
     console.log("dog")
-    toggleSelectionDisplayOff()
+    pet = new Dog()
+    toggleSelectionDisplay("off")
 })
 
 catCtn.addEventListener("click", () => {
     console.log("cat")
-    toggleSelectionDisplayOff()
+    toggleSelectionDisplay("off")
 })
 
 fishCtn.addEventListener("click", () => {
     console.log("fish")
-    toggleSelectionDisplayOff()
+    toggleSelectionDisplay("off")
 })
 
 nameEditBtn.addEventListener("click", () => {
-    nameDisplayCtn.style.display = "none"
-    nameEditCtn.style.display = "block"
+    toggleNameEdit("on")
 })
 
 cancelBtn.addEventListener("click", () => {
-    nameDisplayCtn.style.display = "block"
-    nameEditCtn.style.display = "none"
+    toggleNameEdit("off")
 })
 
 backBtn.addEventListener("click", () => {
-    petSelectionCtn.style.display = "flex"
-    selectedPetCtn.style.display = "none"
+    toggleSelectionDisplay("on")
 })
