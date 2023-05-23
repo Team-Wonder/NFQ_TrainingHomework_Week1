@@ -1,4 +1,6 @@
-import  {Dog, Cat, Fish}  from "./class"
+import { Dog } from "./Animals/dog"
+import { Cat } from "./Animals/cat"
+import { Fish } from "./Animals/fish"
 
 const dogCtn = document.querySelector("#dog")
 const catCtn = document.querySelector("#cat")
