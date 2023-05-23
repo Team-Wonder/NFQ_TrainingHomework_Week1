@@ -36,6 +36,7 @@
     height: 250px;
 }
 
+
 #pet-selection-ctn {
     display: flex;
 }
@@ -43,17 +44,20 @@
 #selected-pet-ctn {
     display: flex;
     border: 1px solid black;
+    padding: 10px;
 }
 
 #selected-pet-ctn img {
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
 }
 
 #info-btn-ctn {
     width: 100%;
     margin-left: 10px;
 }
+
+
 
 #info-btn-ctn div{
     margin-top: 20px;
