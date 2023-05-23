@@ -1,4 +1,4 @@
-import Animals from "./animals"
+import Animals from "./animals.js"
 
 export class Dog extends Animals {
     constructor(name, img) {
