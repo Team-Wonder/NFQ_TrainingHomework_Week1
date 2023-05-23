@@ -1,3 +1,5 @@
+import { Dog, Cat, Fish } from "./class"
+
 const dogCtn = document.querySelector("#dog")
 const catCtn = document.querySelector("#cat")
 const fishCtn = document.querySelector("#fish")
@@ -10,6 +12,7 @@ const selectedPetCtn = document.querySelector("#selected-pet-ctn")
 
 const backBtn = document.querySelector("#back-btn")
 const nameEditBtn = document.querySelector("#name-edit-btn")
+const cancelBtn = document.querySelector("#cancel-btn")
 
 let pet = {}
 
@@ -35,8 +38,13 @@ fishCtn.addEventListener("click", () => {
 })
 
 nameEditBtn.addEventListener("click", () => {
-        petSelectionCtn.style.display = "none"
-        selectedPetCtn.style.display = "flex"
+    nameDisplayCtn.style.display = "none"
+    nameEditCtn.style.display = "block"
+})
+
+cancelBtn.addEventListener("click", () => {
+    nameDisplayCtn.style.display = "block"
+    nameEditCtn.style.display = "none"
 })
 
 backBtn.addEventListener("click", () => {
