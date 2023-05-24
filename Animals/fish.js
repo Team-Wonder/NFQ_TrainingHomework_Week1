@@ -10,7 +10,7 @@ export class Fish extends Animals {
     }
 
     makeSound() {
-        return "I cant make sound!"
+        return "I can't make sound!"
     }
 }
 

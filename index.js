@@ -5,18 +5,22 @@ import { Fish } from "./Animals/fish.js"
 const dogCtn = document.querySelector("#dog")
 const catCtn = document.querySelector("#cat")
 const fishCtn = document.querySelector("#fish")
-// const nameCtn = document.querySelector("#name-ctn")
 const nameDisplayCtn = document.querySelector("#name-display-ctn")
 const nameEditCtn = document.querySelector("#name-edit-ctn")
 const petSelectionCtn = document.querySelector("#pet-selection-ctn")
 const selectedPetCtn = document.querySelector("#selected-pet-ctn")
+const petAction = document.querySelector("#pet-action-h2")
 
 const petImg = document.querySelector("#pet-img")
 const petName = document.querySelector("#pet-name-h3")
 const nameInput = document.querySelector("#name-input")
 
-const backBtn = document.querySelector("#back-btn")
 const nameEditBtn = document.querySelector("#name-edit-btn")
+const makeSoundBtn = document.querySelector("#make-sound-btn")
+const moveBtn = document.querySelector("#move-btn")
+const eatBtn = document.querySelector("#eat-btn")
+
+const backBtn = document.querySelector("#back-btn")
 const savBtn = document.querySelector("#sav-btn")
 const cancelBtn = document.querySelector("#cancel-btn")
 
@@ -37,6 +41,7 @@ function toggleNameEdit(cmd) {
     if (cmd === "off") {
         nameDisplayCtn.style.display = "block"
         nameEditCtn.style.display = "none"
+        return;
     }
 
     nameDisplayCtn.style.display = "none"
@@ -76,11 +81,25 @@ fishCtn.addEventListener("click", () => {
 })
 
 nameEditBtn.addEventListener("click", () => {
+    nameInput.value = pet.name
     toggleNameEdit("on")
 })
 
+makeSoundBtn.addEventListener("click", () => {
+    petAction.innerHTML = pet.makeSound();
+})
+
+eatBtn.addEventListener("click", () => {
+    petAction.innerHTML = pet.eat();
+})
+
+moveBtn.addEventListener("click", () => {
+    petAction.innerHTML = pet.move();
+})
+
 savBtn.addEventListener("click", () => {
-    petName.
+    pet.name = nameInput.value;
+    petName.innerHTML = pet.name;
     toggleNameEdit("off")
 })
 
@@ -89,5 +108,6 @@ cancelBtn.addEventListener("click", () => {
 })
 
 backBtn.addEventListener("click", () => {
+    petAction.innerHTML = ""
     toggleSelectionDisplay("on")
 })
