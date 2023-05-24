@@ -36,28 +36,25 @@
                 </div>
             </div>
             <div id="selected-pet-ctn" style="display: none;">
-                <img 
-                    src="https://mcdn.coolmate.me/image/October2021/meme-cheems-1.png" 
-                    alt="cheems"
-                >
+                <img id="pet-img" src="" alt="pet image">
                 <div id="info-btn-ctn">
                     <div>
                         <div id="name-display-ctn">
                             <p>Your pet name:</p>
-                            <h3>Dog</h3>
+                            <h3 id="pet-name-h3">Dog</h3>
                             <button id="name-edit-btn">Edit</button>
                         </div>
                         <div id="name-edit-ctn" style="display: none;">
                             <label>Enter your pet name: </label>
-                            <input type="text">
+                            <input type="text" id="name-input">
                             <div>
-                                <button>Save</button>
+                                <button id="sav-btn">Save</button>
                                 <button id="cancel-btn">Cancel</button>
                             </div>
                         </div>
                     </div>
                     <div id="output-ctn">
-                        <h2 id="pet-action">Woof woof!</h2>
+                        <h2 id="pet-action-h2">Woof woof!</h2>
                     </div>
                     <div>
                         <button id="make-sound-btn">
@@ -66,7 +63,7 @@
                         <button id="eat-btn">
                             Eat
                         </button>
-                        <button id="move">
+                        <button id="move-btn">
                             Move
                         </button>
                     </div>
