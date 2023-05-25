@@ -6,11 +6,11 @@ export class Fish extends Animals {
     }
 
     move() {
-       return "I am swimming with my fins" 
+       return "I am swimming with my fins." 
     }
 
     makeSound() {
-        return "I can't make sound!"
+        return "..."
     }
 }
 

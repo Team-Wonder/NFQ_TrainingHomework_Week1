@@ -49,7 +49,6 @@ function toggleNameEdit(cmd) {
 }
 
 dogCtn.addEventListener("click", () => {
-    console.log("dog")
     pet = new Dog("Dog", "https://mcdn.coolmate.me/image/October2021/meme-cheems-1.png")
 
     petImg.src = pet.img
@@ -59,8 +58,6 @@ dogCtn.addEventListener("click", () => {
 })
 
 catCtn.addEventListener("click", () => {
-    console.log("cat")
-
     pet = new Cat("Cat", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-aAKFhifsiwACpdHxZHdqy9RDVasz2g6NFmKdN79hy3JwN-Br7ITeSgT07Q-vOR-SCAI&usqp=CAU")
 
     petImg.src = pet.img
@@ -70,8 +67,6 @@ catCtn.addEventListener("click", () => {
 })
 
 fishCtn.addEventListener("click", () => {
-    console.log("fish")
-
     pet = new Fish("Fish", "https://media.tenor.com/ZHze27YyLIkAAAAC/joel-spinning.gif")
 
     petImg.src = pet.img
@@ -109,5 +104,6 @@ cancelBtn.addEventListener("click", () => {
 
 backBtn.addEventListener("click", () => {
     petAction.innerHTML = ""
+    toggleNameEdit("off")
     toggleSelectionDisplay("on")
 })

@@ -6,7 +6,7 @@ export class Cat extends Animals {
     }
 
     move() {
-       return "I am running with 4 legs" 
+       return "I am running on 4 legs." 
     }
 
     makeSound() {
