@@ -1,14 +1,15 @@
 #title {
+    text-transform: uppercase;
     width: 100%;
     height: max-content;
-    background-color: darkblue;
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
+    font-size: 20px;
 }
 
 #title h1 {
-    color: white;
+    color: #ff6e01;
 }
 
 .pet-ctn {
@@ -39,6 +40,7 @@
 
 #pet-selection-ctn {
     display: flex;
+    padding-left: 20px;
 }
 
 #pet-selection-ctn select{
@@ -57,8 +59,9 @@
 #selected-pet-ctn {
     display: flex;
     margin-top: 20px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 10px;
+    
 }
 
 #selected-pet-ctn img {
@@ -66,13 +69,75 @@
     height: 400px;
 }
 
+
 #info-btn-ctn {
     width: 100%;
-    margin-left: 10px;
+    margin-left: 100px;
 }
 
 
 #info-btn-ctn div{
-    margin-top: 20px;
+    margin-top: 70px;
     margin-bottom: 40px;
+}
+
+#pet-img {
+    margin-left: 100px;
+}
+
+#pet-img:hover{
+    transform: scale(1.1);
+}
+
+#name-edit-btn{
+    font-size: 15px;
+    background: #ff6e01;
+    color: #f1e1d2;
+    border-radius: 15px;;
+    padding: 0.5rem 3rem;
+    margin-top: 2rem;
+    border: none;
+    display: block;
+}
+
+#make-sound-btn{
+    font-size: 15px;
+    background: #ff6e01;
+    color: #f1e1d2;
+    border-radius: 15px;;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    border: none;
+    margin-right: 20px;
+}
+
+#eat-btn{
+    font-size: 15px;
+    background: #ff6e01;
+    color: #f1e1d2;
+    border-radius: 15px;;
+    padding: 0.5rem 3rem;
+    margin-top: 1rem;
+    border: none;
+    margin-right: 20px;
+}
+
+#move-btn{
+    font-size: 15px;
+    background: #ff6e01;
+    color: #f1e1d2;
+    border-radius: 15px;;
+    padding: 0.5rem 2.5rem;
+    margin-top: 1rem;
+    border: none;
+}
+
+#pet-name-p{
+    font-size: 25px;
+    display: inline;
+}
+
+#pet-name-h3{
+    font-size: 25px;
+    display: inline;
 }

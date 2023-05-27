@@ -36,16 +36,16 @@ function toggleNameEdit(cmd) {
 petSelection.addEventListener("change", () => {
     switch (petSelection.value) {
         case "dog":
-            pet = new Dog("Dog", "https://mcdn.coolmate.me/image/October2021/meme-cheems-1.png")
+            pet = new Dog("Dog", "https://img.freepik.com/premium-photo/cute-golden-retriver-puppy-white-background_104627-3055.jpg?w=2000")
             break
         case "cat":
-            pet = new Cat("Cat", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-aAKFhifsiwACpdHxZHdqy9RDVasz2g6NFmKdN79hy3JwN-Br7ITeSgT07Q-vOR-SCAI&usqp=CAU")
+            pet = new Cat("Cat", "https://st.depositphotos.com/1004199/1386/i/600/depositphotos_13860480-stock-photo-portrait-of-british-shorthair-cat.jpg")
             break;
         case "fish":
-            pet = new Fish("Fish", "https://media.tenor.com/ZHze27YyLIkAAAAC/joel-spinning.gif")
+            pet = new Fish("Fish", "https://st.depositphotos.com/1047520/1818/i/950/depositphotos_18184873-stock-photo-goldfish-on-white-background.jpg")
             break;
         default:
-            pet = new Dog("Dog", "https://mcdn.coolmate.me/image/October2021/meme-cheems-1.png")
+            pet = new Dog("Dog", "https://img.freepik.com/premium-photo/cute-golden-retriver-puppy-white-background_104627-3055.jpg?w=2000")
     }
 
     selectedPetCtn.style.display = "flex"
