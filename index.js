@@ -2,12 +2,9 @@ import { Dog } from "./Animals/dog.js"
 import { Cat } from "./Animals/cat.js"
 import { Fish } from "./Animals/fish.js"
 
-const dogCtn = document.querySelector("#dog")
-const catCtn = document.querySelector("#cat")
-const fishCtn = document.querySelector("#fish")
 const nameDisplayCtn = document.querySelector("#name-display-ctn")
 const nameEditCtn = document.querySelector("#name-edit-ctn")
-const petSelectionCtn = document.querySelector("#pet-selection-ctn")
+const petSelection = document.querySelector("#pet-select")
 const selectedPetCtn = document.querySelector("#selected-pet-ctn")
 const petAction = document.querySelector("#pet-action-h2")
 
@@ -20,22 +17,10 @@ const makeSoundBtn = document.querySelector("#make-sound-btn")
 const moveBtn = document.querySelector("#move-btn")
 const eatBtn = document.querySelector("#eat-btn")
 
-const backBtn = document.querySelector("#back-btn")
 const savBtn = document.querySelector("#sav-btn")
 const cancelBtn = document.querySelector("#cancel-btn")
 
 let pet = {}
-
-function toggleSelectionDisplay(cmd) {
-    if (cmd === "off") {
-        petSelectionCtn.style.display = "none"
-        selectedPetCtn.style.display = "flex"
-        return;
-    }
-    
-    petSelectionCtn.style.display = "flex"
-    selectedPetCtn.style.display = "none"
-}
 
 function toggleNameEdit(cmd) {
     if (cmd === "off") {
@@ -48,31 +33,27 @@ function toggleNameEdit(cmd) {
     nameEditCtn.style.display = "block"
 }
 
-dogCtn.addEventListener("click", () => {
-    pet = new Dog("Dog", "https://mcdn.coolmate.me/image/October2021/meme-cheems-1.png")
+petSelection.addEventListener("change", () => {
+    switch (petSelection.value) {
+        case "dog":
+            pet = new Dog("Dog", "https://mcdn.coolmate.me/image/October2021/meme-cheems-1.png")
+            break
+        case "cat":
+            pet = new Cat("Cat", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-aAKFhifsiwACpdHxZHdqy9RDVasz2g6NFmKdN79hy3JwN-Br7ITeSgT07Q-vOR-SCAI&usqp=CAU")
+            break;
+        case "fish":
+            pet = new Fish("Fish", "https://media.tenor.com/ZHze27YyLIkAAAAC/joel-spinning.gif")
+            break;
+        default:
+            pet = new Dog("Dog", "https://mcdn.coolmate.me/image/October2021/meme-cheems-1.png")
+    }
 
-    petImg.src = pet.img
+    selectedPetCtn.style.display = "flex"
+
     petName.innerHTML = pet.name
-
-    toggleSelectionDisplay("off")
-})
-
-catCtn.addEventListener("click", () => {
-    pet = new Cat("Cat", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-aAKFhifsiwACpdHxZHdqy9RDVasz2g6NFmKdN79hy3JwN-Br7ITeSgT07Q-vOR-SCAI&usqp=CAU")
-
     petImg.src = pet.img
-    petName.innerHTML = pet.name
 
-    toggleSelectionDisplay("off")
-})
-
-fishCtn.addEventListener("click", () => {
-    pet = new Fish("Fish", "https://media.tenor.com/ZHze27YyLIkAAAAC/joel-spinning.gif")
-
-    petImg.src = pet.img
-    petName.innerHTML = pet.name
-
-    toggleSelectionDisplay("off")
+    console.log(pet)
 })
 
 nameEditBtn.addEventListener("click", () => {
@@ -102,8 +83,3 @@ cancelBtn.addEventListener("click", () => {
     toggleNameEdit("off")
 })
 
-backBtn.addEventListener("click", () => {
-    petAction.innerHTML = ""
-    toggleNameEdit("off")
-    toggleSelectionDisplay("on")
-})
