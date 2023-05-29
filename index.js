@@ -50,6 +50,7 @@ petSelection.addEventListener("change", () => {
 
     selectedPetCtn.style.display = "flex"
 
+    petAction.innerHTML = ""
     petName.innerHTML = pet.name
     petImg.src = pet.img
 
